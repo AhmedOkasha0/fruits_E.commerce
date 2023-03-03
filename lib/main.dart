@@ -1,6 +1,5 @@
-import 'package:e/ui/bording/bording_screen.dart';
-import 'package:e/ui/bording/first_screen.dart';
-import 'package:e/ui/home_screen.dart';
+import 'package:e/ui/Login/login_view.dart';
+import 'package:e/ui/bording/boarding_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,11 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        BordingScreen.routeName: (context) => BordingScreen(),
-        HomeScree.routeName: (context) => HomeScree(),
-        FirstScreen.routeName: (context) => FirstScreen(),
+        BoardingView.routeName: (context) => BoardingView(),
+        LoginScreen.routeName:(context)=> LoginScreen(),
       },
-      initialRoute: FirstScreen.routeName,
+      initialRoute: BoardingView.routeName,
     );
   }
 }

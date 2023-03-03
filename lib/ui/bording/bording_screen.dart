@@ -1,12 +1,8 @@
-import 'package:e/ui/bording/first_screen.dart';
-import 'package:e/ui/bording/second_screen.dart';
-import 'package:e/ui/bording/third_screen.dart';
+import 'package:e/ui/bording/item_boarding.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class BordingScreen extends StatefulWidget {
-  static const String routeName = 'bording';
   final PageController controller = PageController();
 
   @override
@@ -16,19 +12,21 @@ class BordingScreen extends StatefulWidget {
 class _BordingScreenState extends State<BordingScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          PageView(
-            controller: PageController(),
-            children: [
-              FirstScreen(),
-              SecondScreen(),
-              ThirdScreen(),
-            ],
-          )
-        ],
-      ),
+    return PageView(
+      children: [
+        ItemBoarding(
+            image: 'assets/images/border_one.png',
+            title: 'E Shopping',
+            text: 'Explore top organic fruits & grap theme'),
+        ItemBoarding(
+            image: 'assets/images/border_two.png',
+            title: 'Delivery On The Way',
+            text: 'get your order by speed delivery'),
+        ItemBoarding(
+            image: 'assets/images/border_three.png',
+            title: 'Delivery Arrived',
+            text: 'Order is arrived at your Place'),
+      ],
     );
   }
 }
